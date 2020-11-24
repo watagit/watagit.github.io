@@ -1,27 +1,65 @@
 ---
 category: 'blog'
 cover: './cover.jpg'
-title: 'ポートフォリオを移行しました'
+title: 'ReactのStateの初期化について'
 description: ''
 date: '2019-09-30'
-tags: ['hello']
-published: false
+tags: ['react', 'typescript']
+published: true
 ---
 
-_Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat._.
+```tsx:title=Sample.tsx
+import React, { useState } from 'react'
 
-**Sed ut perspiciatis unde omnis**
+const Sample: React.FC = () => {
+  const [ count, setCount ] = useState(0)
 
-![Aliquet vel mollis nec](./cover.jpg)
+  const decreaseCount = () => {
+    setCount(count - 1)
+  }
 
-"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+  const increaseCount = () => {
+    setCount(count + 1)
+  }
 
-Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+  return (
+    <div>
+      <button onClick={decreaseCount}> - </button>
+      <span> {count} </span>
+      <button onClick={increaseCount}> + </button>
+    </div>
+  )
+}
 
-**Sconsectetur, adipisci velits**
+export default Sample
+```
 
-"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+↓ のようにも書ける
 
-Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+```tsx:title=Sample.tsx
+import React, { useState } from 'react'
 
-"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+const countInitial = () => {
+  return 0
+}
+
+const Todo: React.FC = () => {
+  const [ todos, setTodos ] = useState(() => countInitial())
+
+  const decreaseCount = () => {
+    setCount(count - 1)
+  }
+
+  const increaseCount = () => {
+    setCount(count + 1)
+  }
+
+  return (
+    <div>
+      <button onClick={decreaseCount}> - </button>
+      <span> {count} </span>
+      <button onClick={increaseCount}> + </button>
+    </div>
+  )
+}
+```

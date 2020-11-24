@@ -8,6 +8,8 @@ tags: ['react', 'typescript']
 published: true
 ---
 
+↓ 一般的な初期化方法
+
 ```tsx:title=Sample.tsx
 import React, { useState } from 'react'
 
@@ -33,6 +35,8 @@ const Sample: React.FC = () => {
 
 export default Sample
 ```
+
+<br />
 
 ↓ のようにも書ける
 
@@ -63,3 +67,8 @@ const Todo: React.FC = () => {
   )
 }
 ```
+
+<br />
+
+**参考文献** <br />
+[What I Have Learned Using React Hooks](https://medium.com/swlh/what-i-have-learned-using-react-hooks-b5d99593b33a)

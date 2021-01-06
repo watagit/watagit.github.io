@@ -10,7 +10,7 @@ published: true
 
 ↓ 一般的な初期化方法
 
-```tsx:title=Sample.tsx
+```tsx
 import React, { useState } from 'react'
 
 const Sample: React.FC = () => {
@@ -40,7 +40,7 @@ export default Sample
 
 ↓ のようにも書ける
 
-```tsx:title=Sample.tsx
+```tsx
 import React, { useState } from 'react'
 
 const countInitial = () => {

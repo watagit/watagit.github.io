@@ -13,26 +13,17 @@ export default createGlobalStyle`
   p + p {
     ${tw`mt-3`};
   }
-  
-  .gatsby-code-title {
-  display: block;
-  position: relative;
-  background: #272822;
-  width: 100%;
-  top: 10px;
-  border-top-left-radius: 0.3em;
-  border-top-right-radius: 0.3em;
-}
 
-.gatsby-code-title span {
-  display: inline;
-  position: relative;
-  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-  color: #eee;
-  background: #777;
-  border-top-left-radius: 0.3em;
-  border-bottom-right-radius: 0.3em;
-  padding: 3px;
-  top: -3px;
+.gatsby-highlight {
+  background-color: #2d2d2d;
+  margin: 0.5em 0;
+  padding: 1em;
+  overflow: auto;
+  @media screen and (max-width: 1024px) {}
+  @media screen and (max-width: 896px) {
+    font-size: 8px;
+    width: 330px;
+  }
+  @media screen and (max-width: 480px) {}
 }
 `;

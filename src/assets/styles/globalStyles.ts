@@ -21,7 +21,7 @@ export default createGlobalStyle`
   overflow: auto;
   @media screen and (max-width: 1024px) {}
   @media screen and (max-width: 896px) {
-    font-size: 8px;
+    font-size: 10px;
     width: 330px;
   }
   @media screen and (max-width: 480px) {}

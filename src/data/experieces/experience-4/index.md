@@ -8,5 +8,4 @@ endDate: 'Present'
 
 アルバイトとして業務のサポート開発や新機能の開発に携わる。
 
-Ruby  
-Ruby on Rails
+Ruby, Ruby on Rails

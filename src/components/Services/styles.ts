@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import tw from 'tailwind.macro';
 
 export const Services = styled.div`
-  ${tw`flex flex-wrap mx-auto`};
+  ${tw`flex flex-wrap mx-auto w-full`};
 `;
 
 export const ServiceItem = styled.div`

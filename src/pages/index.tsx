@@ -9,7 +9,7 @@ import Services from 'components/Services';
 const IndexPage: React.FC = () => {
   return (
     <Layout>
-      <SEO title="What a Portfolio!" />
+      <SEO title="What a Portfolio!" description="わたぽんのポートフォリオ" image="/images/summary.png" />
       <HeroBanner />
       <Services />
       <hr />

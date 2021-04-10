@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Wataru Ono`,
     description: `わたぽんのポートフォリオ`,
-    author: `Saimir Kapaj`
+    author: `Saimir Kapaj`,
   },
   plugins: [
     `gatsby-plugin-typescript`,

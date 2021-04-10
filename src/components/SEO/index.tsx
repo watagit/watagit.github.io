@@ -17,9 +17,10 @@ interface Props {
   lang?: string;
   meta?: Meta[];
   title: string;
+  image: string;
 }
 
-const SEO: React.FC<Props> = ({ description, lang, meta, title }) => {
+const SEO: React.FC<Props> = ({ description, lang, meta, title, image }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -36,48 +37,23 @@ const SEO: React.FC<Props> = ({ description, lang, meta, title }) => {
 
   const metaDescription = description || site.siteMetadata.description;
 
+  const siteUrl = site.siteMetadata.siteUrl;
+  const defaultImage = `${siteUrl}../../assets/images/summary.png`
+
   return (
-    <Helmet
-      htmlAttributes={{
-        lang
-      }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription
-        },
-        {
-          property: `og:title`,
-          content: title
-        },
-        {
-          property: `og:description`,
-          content: metaDescription
-        },
-        {
-          property: `og:type`,
-          content: `website`
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author
-        },
-        {
-          name: `twitter:title`,
-          content: title
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription
-        }
-      ].concat(meta!)}
-    />
+    <Helmet>
+      <html lang={lang} />
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta property="og:site_name" content={title} />
+      <meta property="og:image" content={'https://watagit.github.io/twitcard/summary.png'} />
+      <meta property="og:title" content={title} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:image" content={'https://watagit.github.io/twitcard/summary.png'} />
+      <meta name="twitter:text:title" content={title} />
+    </Helmet>
   );
 };
 

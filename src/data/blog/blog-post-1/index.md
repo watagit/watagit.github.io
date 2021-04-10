@@ -5,7 +5,7 @@ title: 'ReactのStateの初期化について'
 description: ''
 date: '2019-09-30'
 tags: ['react', 'typescript']
-published: true
+published: false
 ---
 
 ↓ 一般的な初期化方法

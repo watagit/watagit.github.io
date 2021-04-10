@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Wataru Ono`,
-    description: `Gatsby Markdown Personal Website Starter, using Typescript, Styled Components, Tailwindcss and Framer Motion.`,
+    description: `わたぽんのポートフォリオだよん`,
     author: `Saimir Kapaj`
   },
   plugins: [

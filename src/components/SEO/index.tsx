@@ -75,6 +75,10 @@ const SEO: React.FC<Props> = ({ description, lang, meta, title }) => {
         {
           name: `twitter:description`,
           content: metaDescription
+        },
+        {
+          image: "og:image",
+          content: "src/assets/images/gatsby-icon.png"
         }
       ].concat(meta!)}
     />

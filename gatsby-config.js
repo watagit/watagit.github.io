@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Wataru Ono`,
-    description: `わたぽんのポートフォリオだよん`,
+    description: `わたぽんのポートフォリオ`,
     author: `Saimir Kapaj`
   },
   plugins: [

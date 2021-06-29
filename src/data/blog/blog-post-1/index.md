@@ -11,18 +11,18 @@ published: false
 ↓ 一般的な初期化方法
 
 ```tsx
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 const Sample: React.FC = () => {
-  const [ count, setCount ] = useState(0)
+  const [count, setCount] = useState(0);
 
   const decreaseCount = () => {
-    setCount(count - 1)
-  }
+    setCount(count - 1);
+  };
 
   const increaseCount = () => {
-    setCount(count + 1)
-  }
+    setCount(count + 1);
+  };
 
   return (
     <div>
@@ -30,10 +30,10 @@ const Sample: React.FC = () => {
       <span> {count} </span>
       <button onClick={increaseCount}> + </button>
     </div>
-  )
-}
+  );
+};
 
-export default Sample
+export default Sample;
 ```
 
 <br />
@@ -41,22 +41,22 @@ export default Sample
 ↓ のようにも書ける
 
 ```tsx
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 const countInitial = () => {
-  return 0
-}
+  return 0;
+};
 
 const Todo: React.FC = () => {
-  const [ todos, setTodos ] = useState(() => countInitial())
+  const [todos, setTodos] = useState(() => countInitial());
 
   const decreaseCount = () => {
-    setCount(count - 1)
-  }
+    setCount(count - 1);
+  };
 
   const increaseCount = () => {
-    setCount(count + 1)
-  }
+    setCount(count + 1);
+  };
 
   return (
     <div>
@@ -64,8 +64,8 @@ const Todo: React.FC = () => {
       <span> {count} </span>
       <button onClick={increaseCount}> + </button>
     </div>
-  )
-}
+  );
+};
 ```
 
 <br />

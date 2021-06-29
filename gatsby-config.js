@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Wataru Ono`,
     description: `わたぽんのポートフォリオ`,
-    author: `Saimir Kapaj`,
+    author: `Saimir Kapaj`
   },
   plugins: [
     `gatsby-plugin-typescript`,
@@ -33,7 +33,7 @@ module.exports = {
               inlineCodeMarker: null,
               aliases: {
                 js: 'javascript',
-                sh: 'bash',
+                sh: 'bash'
               },
               showLineNumbers: false,
               noInlineHighlight: false,
@@ -43,16 +43,16 @@ module.exports = {
                   extend: 'javascript',
                   definition: { superscript_types: /(SuperType)/ },
                   insertBefore: {
-                    function: { superscript_keywords: /(superif|superelse)/ },
-                  },
-                },
+                    function: { superscript_keywords: /(superif|superelse)/ }
+                  }
+                }
               ],
               prompt: { user: 'root', host: 'localhost', global: false },
-              escapeEntities: {},
-            },
-          },
-        ],
-      },
+              escapeEntities: {}
+            }
+          }
+        ]
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
